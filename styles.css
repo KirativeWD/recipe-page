@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'Young Serif';
+    font-weight: 400;
+    src: url(./assets/fonts/YoungSerif-Regular.woff2) format(woff2), url(./assets/fonts/YoungSerif-Regular.woff) format(woff);
+}
+
+@font-face {
+    font-family: 'Outfit';
+    font-weight: 400;
+    src: url(./assets/fonts/Outfit-Regular.woff2) format(woff2), url(./assets/fonts/Outfit-Regular.woff) format(woff);
+}
+
+@font-face {
+    font-family: 'Outfit';
+    font-weight: 600;
+    src: url(./assets/fonts/Outfit-Medium.woff2) format(woff2), url(./assets/fonts/Outfit-Medium.woff) format(woff);
+}
+
+@font-face {
+    font-family: 'Outfit';
+    font-weight: 600;
+    src: url(./assets/fonts/Outfit-Bold.woff2) format(woff2), url(./assets/fonts/Outfit-Bold.woff) format(woff);
+}
+
+
+/* ========================================
+Table of Contents
+===========================================
+
+* 1. ROOT VARIABLES
+* 2. UTILITY CLASSES
+* 3. GENERAL STYLING
+* 4. TYPOGRAPHY
+* 5. NUTRITION TABLE
+* 6. MEDIA QUERIES
+
+===========================================
+======================================== */
+
+/* ====================[1]==================== */
+/* ===== ROOT VARIABLES ===== */
+
+:root {
+
+    /* == COLORS == */
+    /* BRAND */
+    --clr-brand-neutral: hsl(14 45% 36%);
+    --clr-brand-accent: hsl(332 51% 32%);
+
+    /* NEUTRALS */
+    --clr-neutral-100: hsl(0 05 100%);
+    --clr-neutral-150: hsl(330 100% 98%);
+    --clr-neutral-200: hsl(30 54% 90%);
+    --clr-neutral-250: hsl(30 18% 87%);
+    --clr-neutral-600: hsl(0 10% 34%);
+    --clr-neutral-800: hsl(24 5% 18%);
+
+    /* == TYPOGRAPHY == */
+    /* FONT FAMILY */
+    --ff-heading: 'Young Serif', sans-serif;
+    --ff-body: 'Outfit', serif;
+
+}
+
+/* ====================[2]==================== */
+/* ===== UTILITY CLASSES ===== */
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.clr-raspberry {
+    color: var(--clr-brand-accent);
+}
+
+.inline-padding {
+    padding-inline: 2rem;
+}
+
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+/* ====================[3]==================== */
+/* ===== GENERAL STYLING ===== */
+
+body {
+    font-size: 1rem;
+    color: var(--clr-neutral-600);
+    font-family: var(--ff-body);
+}
+
+section {
+    margin-block: 1.5rem 1.75rem;
+}
+
+.preparation {
+    background: var(--clr-neutral-150);
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ol {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+ol li {
+    padding-left: 1rem;
+}
+
+ol li::marker {
+    color: var(--clr-brand-neutral);
+    font-weight: 600;
+}
+
+ul li {
+    padding-left: 2.5rem;
+    position: relative;
+}
+
+ul li::before {
+    content: "•";
+    position: absolute;
+    font-size: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.5rem;
+}
+
+.preparation__list li::before {
+    color: var(--clr-brand-accent);
+}
+
+.ingredient-list li::before {
+    color: var(--clr-brand-neutral);
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--clr-neutral-250);
+}
+
+footer {
+    text-align: center;
+    padding-inline: 2rem;
+    margin-block: 3rem 2rem;
+}
+
+/* ====================[4]==================== */
+/* ===== TYPOGRAPHY ===== */
+
+h1,
+h2:not(.preparation__title) {
+    font-family: var(--ff-heading);
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.25rem;
+    line-height: 1;
+    margin-block: 2.5rem 1.5rem;
+    color: var(--clr-neutral-800);
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: var(--clr-brand-neutral);
+}
+
+.preparation__title {
+    font-size: 1.25rem;
+    color: var(--clr-brand-accent);
+}
+
+a {
+    color: var(--clr-brand-accent);
+}
+
+/* ====================[5]==================== */
+/* ===== NUTRITION TABLE ===== */
+
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+caption {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+tr {
+    height: 3rem;
+}
+
+tr:not(:last-of-type) {
+    border-bottom: 1px solid var(--clr-neutral-250);
+}
+
+th {
+    padding-left: 2rem;
+    font-weight: 400;
+}
+
+td {
+    color: var(--clr-brand-neutral);
+}
+
+/* ====================[6]==================== */
+/* ===== MEDIA QUERIES ===== */
+
+@media (width >=48em) {
+
+    .inline-padding {
+        padding: 0;
+    }
+
+    body {
+        background-color: var(--clr-neutral-200);
+    }
+
+    article {
+        max-width: 45em;
+        padding: 2.5rem 2.5rem 0.25rem;
+        margin: 10lvh auto 0;
+        background: var(--clr-neutral-100);
+        border-radius: 1.5rem;
+    }
+
+    img {
+        border-radius: 1rem;
+    }
+
+}
