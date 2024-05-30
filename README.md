@@ -16,6 +16,9 @@ This is my solution to the [Recipe page challenge on Frontend Mentor](https://ww
 ## Overview
 
 ### Screenshot
+![Desktop view of KirativeWD's solution to recipe page](https://github.com/KirativeWD/recipe-page/assets/46665152/d79a70a2-42cb-4264-bcd5-bc7eda727dc2)
+![Desktop view of KirativeWD's solution to recipe page](https://github.com/KirativeWD/recipe-page/assets/46665152/f1e461c9-e9a0-4226-b1ec-c21ddc312786)
+
 
 ### Links
 
